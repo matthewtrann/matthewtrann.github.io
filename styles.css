@@ -1,0 +1,125 @@
+:root {
+  --text: #1c1c1c;
+  --muted: #5a5a5a;
+  --bg: #ffffff;
+  --accent: #2c5aa0;
+  --border: #e5e5e5;
+  --max-width: 900px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+.site-header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+}
+nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero {
+  padding: 5rem 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--border);
+}
+.section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+.project-card h3 {
+  margin: 0 0 0.25rem;
+}
+.project-card p {
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Contact */
+.socials a {
+  margin-right: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+  nav a { margin-left: 1rem; }
+}
